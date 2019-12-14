@@ -1,0 +1,167 @@
+body{
+    width: 100vw;
+    height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+background-image: url(https://cdn.pixabay.com/photo/2017/08/10/02/05/tiles-shapes-2617112__340.jpg);
+background-size: cover;
+overflow: hidden;
+box-shadow:2px 4px 5px whitesmoke;
+}
+#grid { 
+    display: grid;
+    grid-template-rows: repeat(4, 50px);
+    grid-template-columns: 100px 100px 100px;
+    grid-gap: 20px;
+}
+
+#grid > div {
+    font-size: 36px;
+    padding: 5px;
+    background-image: radial-gradient(rgb(112, 207, 169), rgb(134, 194, 169), rgb(157, 181, 169), rgb(179, 169, 169), rgb(202, 156, 169), rgb(224, 143, 169), rgb(198, 132, 147), rgb(172, 121, 125), rgb(146, 110, 103), rgb(119, 99, 81), rgb(93, 88, 59), rgb(67, 77, 37));
+    text-align: center;
+    color:#fff;
+}
+
+@media screen and (min-width: 800px) and (max-width: 1200px) {
+    #grid > div:nth-of-type(odd) {
+        transform: matrix(0.5,0.3,-1,0.5,5,0);
+        transition: 2s ;
+        }
+}
+
+@media screen and (min-width: 400px) and (max-width: 800px) {
+    #grid > div:nth-of-type(2n+1) {
+        transform: scale(0.8);
+        transition: 3s ease-in-out;
+        opacity:0.5;
+        }
+}       
+
+@media screen and (max-width: 400px) {
+   /* #grid { 
+        display: block;
+     width: 260px;
+     position: fixed;
+   
+    }
+    #grid > div{
+    height: 50px;
+    width: 100px;
+    margin: 10px;
+    float:left;
+    transition-delay: 0.5s;
+    transition: 1s  linear;
+}
+#grid > div:nth-of-type(1):hover{
+    transform:translateX(-240px);
+    transition: 3s;
+}
+
+#grid > div:nth-of-type(5){
+    animation: rotate 1s linear infinite;
+}
+@keyframes rotate {
+    from{ 
+        transform: rotateY(0deg);
+    }
+   to {
+        transform: rotateY(360deg);
+    }
+    
+}
+#grid > div:nth-of-type(8){
+    animation: rotateY 1s ease infinite;
+}
+@keyframes rotateY {
+    from{ 
+        transform: rotateX(0deg);
+    }
+   to {
+        transform:  rotateX(360deg);
+    }
+    
+} */
+/*------------------ЭТОТ ВАРИАНТ КРАСИВЕЕ--------------------*/
+ #grid > div:nth-of-type(3){
+    transform:translate(-240px,70px);
+    background-color: palevioletred;
+    transition: 3s;
+}
+#grid > div:nth-of-type(4){
+    transform:translateX(120px);
+    background-color: palevioletred;
+    transition: 3s;
+}
+
+#grid > div:nth-of-type(6){
+    transform:translate(-120px,70px);
+    background-color: rgb(142, 192, 233);
+   transition: 3s;
+}
+#grid > div:nth-of-type(7){
+    transform:translateY(70px);
+    background-color: yellow;
+   transition: 3s;
+}
+
+#grid > div:nth-of-type(9){
+    transform:translate(-240px,140px);
+    background-color: violet;
+   transition: 3s;
+}
+#grid > div:nth-of-type(10){
+    transform:translate(120px,70px);
+    background-color: violet;
+    transition: 3s;
+}
+
+#grid > div:nth-of-type(11){
+    transform:translate(-120px,140px);
+    background-color: rgb(72, 146, 207);
+   transition: 3s;
+}
+#grid > div:nth-of-type(12){
+  transform:translate(-120px, 140px);
+    background-color: rgb(72, 146, 207);
+   transition: 3s;
+}
+
+#grid > div:nth-of-type(5){
+    background-color:  rgb(142, 192, 233);
+    transition: 3s;
+    animation: rotate 1s linear infinite;
+}
+
+
+@keyframes rotate {
+    from{ 
+        transform: translate(-120px, 70px) rotateY(0deg);
+    }
+   to {
+        transform: translate(-120px, 70px) rotateY(360deg);
+    }
+    
+}
+#grid > div:nth-of-type(8){
+    background-color: yellow;
+    transition: 3s;
+    animation: rotateY 1s ease infinite;
+}
+@keyframes rotateY {
+    from{ 
+        transform: translateY(70px) rotateX(0deg);
+    }
+   to {
+        transform: translateY(70px) rotateX(360deg);
+    }
+   
+}
+#grid > div:nth-of-type(1):hover{
+    transform:translateX(-240px);
+    transition: 3s;
+    
+}
+
+}       
